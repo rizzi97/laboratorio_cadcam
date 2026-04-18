@@ -16,6 +16,10 @@ print(f'Peso totale: {risultato} kg')
 # TODO 1: crea una funzione 'calcola_costo_totale(quantita, prezzo_unitario)'
 #         che restituisce quantita * prezzo_unitario
 
+def calcola_costo_totale(quantita, prezzo_unitario):
+    """Ritorna il costo totale moltiplicando la quantitaà per il prezzo unitario. """
+    return quantita * prezzo_unitario
+
 # ─── Lista di parti ─────────────────────────────────────────────────────────
 # Una lista e' una sequenza ordinata di elementi
 distinta_base = [
@@ -26,13 +30,17 @@ distinta_base = [
 
 # Un ciclo 'for' esegue il codice per ogni elemento della lista
 print('\n--- Distinta base ---')
+peso_assieme = 0;
 for parte in distinta_base:
     # 'parte' e' un dizionario: si accede ai valori con parte['chiave']
     nome     = parte['nome']
     qty      = parte['quantita']
     peso     = parte['peso_kg']
     peso_tot = calcola_peso_totale(qty, peso)
+    peso_assieme = peso_assieme + peso_tot
     print(f'{nome:<25} qty={qty:>3}  peso tot={peso_tot:.3f} kg')
+
+print(f'\nPeso TOTALE assieme: {peso_assieme:.3f} kg')
 
 # TODO 2: calcola e stampa il peso TOTALE dell'assieme
 #   suggerimento: crea una variabile 'peso_assieme = 0'
