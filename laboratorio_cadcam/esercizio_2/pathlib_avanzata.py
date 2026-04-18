@@ -39,6 +39,30 @@ if tutti:
 #   suggerimento: usa rglob('*') che cerca anche nelle sottocartelle,
 #   poi filtra solo i file con .is_file()
 
+cartella_modulo = Path('modulo1')
+contatore = 0
+if cartella_modulo.exists():
+    elenco_file_modulo_uno = cartella_modulo.rglob('*')
+    for file in elenco_file_modulo_uno:
+        if file.is_file():
+            contatore = contatore + 1
+print(f'\nNella cartella modulo1 ci sono : {contatore} file')
+
+#Soluzione alternativa
+
+cartella_modulo = Path('modulo1')
+if cartella_modulo.exists():
+    contatore = sum(1 for file in cartella_modulo.rglob('*') if file.is_file())
+    print(f'\nNella cartella modulo1 ci sono : {contatore} file')
+
+
 # TODO 2: crea una cartella 'esercizio_2/output/archivio/'
 #   e copia in essa tutti i file .step trovati
 #   suggerimento: shutil.copy2(sorgente, destinazione)
+cartella_archivio = Path('esercizio_2') / 'output'/'archivio'
+cartella_archivio.mkdir(parents=True, exist_ok=True)
+
+for file_esistente in file_step:
+    nuovo_file = cartella_archivio / file_esistente.name
+    shutil.copy2(file_esistente, nuovo_file)
+    print(f'Il file {file.name} è stato copiato in {nuovo_file}')

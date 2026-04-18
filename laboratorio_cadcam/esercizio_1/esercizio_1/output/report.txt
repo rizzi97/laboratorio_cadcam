@@ -1,0 +1,3 @@
+Parte: Staffa superiore
+Quantita: 4
+Peso: 0.580 kg
