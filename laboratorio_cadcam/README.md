@@ -8,7 +8,7 @@ in Automazione CAD/CAM con Python
 ## Autore
 
 Nome: Marco Rizzi
-Email: marco.rizzi@poliba.com
+Email: marco.rizzi@poliba.it
 Data: 18 Aprile 2026
 
 ## Struttura del progetto
