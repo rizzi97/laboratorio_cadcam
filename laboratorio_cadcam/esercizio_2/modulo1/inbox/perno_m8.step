@@ -1,0 +1,60 @@
+ISO-10303-21;
+HEADER;
+FILE_DESCRIPTION(('Perno_M8 - file dimostrativo per laboratorio didattico'),'2;1');
+FILE_NAME('perno_m8.step','2024-01-15T09:00:00',('Ing. Marco Rizzi'),('Master CAD/CAM'),
+'OpenCASCADE STEP processor 7.7','','');
+FILE_SCHEMA(('AUTOMOTIVE_DESIGN { 1 0 10303 214 1 1 1 1 }'));
+ENDSEC;
+DATA;
+#1 = PRODUCT('perno_m8','Perno M8x30','',(#2));
+#2 = PRODUCT_CONTEXT('',#3,'mechanical');
+#3 = APPLICATION_CONTEXT('automotive design');
+#4 = PRODUCT_DEFINITION_FORMATION('A','Prima revisione',#1);
+#5 = PRODUCT_DEFINITION('design','',#4,#6);
+#6 = PRODUCT_DEFINITION_CONTEXT('part definition',#3,'design');
+#7 = SHAPE_DEFINITION_REPRESENTATION(#8,#9);
+#8 = PRODUCT_DEFINITION_SHAPE('','',#5);
+#9 = ADVANCED_BREP_SHAPE_REPRESENTATION('',(#10),#11);
+#10 = MANIFOLD_SOLID_BREP('',#12);
+#11 = (GEOMETRIC_REPRESENTATION_CONTEXT(3)
+GLOBAL_UNCERTAINTY_ASSIGNED_CONTEXT((#13))
+GLOBAL_UNIT_ASSIGNED_CONTEXT((#14,#15,#16))
+REPRESENTATION_CONTEXT('Context #1','3D Context with UNIT and UNCERTAINTY'));
+#12 = CLOSED_SHELL('',(#20,#21,#22));
+#13 = UNCERTAINTY_MEASURE_WITH_UNIT(LENGTH_MEASURE(1.E-07),#14,'distance_accuracy_value','');
+#14 = (NAMED_UNIT(*) SI_UNIT($,.MILLI.) LENGTH_UNIT());
+#15 = (NAMED_UNIT(*) SI_UNIT($,.STERADIAN.) SOLID_ANGLE_UNIT());
+#16 = (NAMED_UNIT(*) SI_UNIT($,.RADIAN.) PLANE_ANGLE_UNIT());
+/* Superficie cilindrica corpo perno D=8mm, L=30mm */
+#20 = ADVANCED_FACE('',(#30),#40,.T.);
+#30 = FACE_OUTER_BOUND('',#31,.T.);
+#31 = EDGE_LOOP('',(#32,#33));
+#32 = ORIENTED_EDGE('',*,*,#50,.T.);
+#33 = ORIENTED_EDGE('',*,*,#51,.F.);
+#40 = CYLINDRICAL_SURFACE('',#41,4.);
+#41 = AXIS2_PLACEMENT_3D('',#60,#61,#62);
+#60 = CARTESIAN_POINT('',(0.,0.,0.));
+#61 = DIRECTION('',(0.,0.,1.));
+#62 = DIRECTION('',(1.,0.,0.));
+/* Disco inferiore */
+#21 = ADVANCED_FACE('',(#70),#80,.F.);
+#70 = FACE_OUTER_BOUND('',#71,.T.);
+#71 = EDGE_LOOP('',(#72));
+#72 = ORIENTED_EDGE('',*,*,#50,.F.);
+#80 = PLANE('',#81);
+#81 = AXIS2_PLACEMENT_3D('',#90,#91,#92);
+#90 = CARTESIAN_POINT('',(0.,0.,0.));
+#91 = DIRECTION('',(0.,0.,-1.));
+#92 = DIRECTION('',(1.,0.,0.));
+/* Disco superiore */
+#22 = ADVANCED_FACE('',(#100),#110,.T.);
+#100 = FACE_OUTER_BOUND('',#101,.T.);
+#101 = EDGE_LOOP('',(#102));
+#102 = ORIENTED_EDGE('',*,*,#51,.T.);
+#110 = PLANE('',#111);
+#111 = AXIS2_PLACEMENT_3D('',#120,#121,#122);
+#120 = CARTESIAN_POINT('',(0.,0.,30.));
+#121 = DIRECTION('',(0.,0.,1.));
+#122 = DIRECTION('',(1.,0.,0.));
+ENDSEC;
+END-ISO-10303-21;
