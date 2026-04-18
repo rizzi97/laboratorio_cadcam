@@ -1,0 +1,22 @@
+part_number,description,material,quantity,unit_weight_kg,revision
+PN-00123,Staffa superiore,Al6061,4,0.145,B
+PN-00124,Perno M8x30,Acciaio C45,12,0.025,A
+PN-00125,Piastra base,Al6061,1,1.240,C
+PN-00126,Rondella piana D8,Acciaio inox,24,0.003,A
+PN-00127,Dado M8 autobloccante,Acciaio inox,12,0.008,A
+PN00128,Coperchio superiore,Al6061,1,0.680,B
+PN-00129,Molla a tazza,Acciaio 65Mn,8,,A
+PN-00130,Guarnizione OR 50x3,NBR70,4,0.012,a
+PN-00131,Cuscinetto SKF 6205,Acciaio da cuscinetti,2,0.095,B
+PN-00132,Albero principale,Acciaio 42CrMo4,-1,0.780,A
+PN-00133,Seeger esterno D25,Acciaio C75,4,0.004,C
+PN-00123,Staffa superiore duplicata,Al6061,4,0.145,B
+PN-00134,Flangia di accoppiamento,GH230,2,0.430,D1
+PN-00135,Vite TCEI M6x20,Acciaio 8.8,16,0.006,A
+PN-00136,Tappo di chiusura,Nylon PA66,3,0.018,B
+PN-00137,Anello di tenuta,FKM80,,0.002,A
+PN-00138,Piastra di rinforzo,Al6061,2,0.520,C
+PN-00139,Sensore di prossimità,Alluminio+Plastica,1,0.145,A
+PN-00140,Cavo di collegamento,Rame+PVC,3,0.085,B
+PN-00141,Passacavo PG16,Poliammide,6,-0.025,A
+PN-00142,Dado di fissaggio M12,Acciaio inox,8,0.022,E
